@@ -35,6 +35,12 @@
         elem.style.fontSize = 0.4 * 4 / i + "em";
         elem.innerText = inner;
     };
+    let setCodeInner = (elem, inner) => {
+        let i = inner.toString().length;
+        i = i < 2 ? 2 : i;
+        elem.style.fontSize = 0.8 * 2 / i + "em";
+        elem.innerText = inner;
+    };
 
     let game_score = 0;
     let game_over_flag = false;
@@ -67,7 +73,7 @@
             this.elem_code = document.createElement("div");
             this.elem_code.classList.add("game-code");
             this.elem_code.classList.add("game-code-" + value);
-            this.elem_code.innerText = value;
+            setCodeInner(this.elem_code, value);
             this.setPosition(this, x, y);
         },
         proto: {
