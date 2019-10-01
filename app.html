@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+    <head>
+        <title>2048</title>
+        <meta charset='utf-8' />
+        <link rel="stylesheet" href="style/main.css">
+        <link rel="stylesheet" href="style/animation.css">
+        <link rel="stylesheet" href="style/game.css">
+        <script src="core.js"></script>
+    </head>
+    <body>
+        <div class="main-container">
+            <div id="game-title">2048</div>
+            <div id="game-score-board">
+                <div class="game-score-label" id="game-score-label">SCORE</div>
+                <div class="game-score" id="game-current-score">0</div>
+            </div>
+            <div id="game-best-board">
+                <div class="game-score-label" id="game-best-label">BEST</div>
+                <div class="game-score" id="game-best-score">0</div>
+            </div>
+            <div id="game-subtitle">Play 2048 Game Online</div>
+            <div id="game-new-game-button">New Game</div>
+            <div id="game-board"></div>
+            <div id="game-over-elem" hidden><div class="game-over-text">Game Over !</div></div>
+            <div id="game-clear-elem" hidden><div class="game-clear-text">Game Clear !</div></div>
+        </div>
+        <script src="main.js"></script>
+    </body>
+</html>

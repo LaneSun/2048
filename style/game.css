@@ -1,0 +1,93 @@
+.game-tile {
+	transition: all 300ms;
+	position: absolute;
+	width: 118px;
+	height: 118px;
+	transform: translate(-50%, -50%);
+	background-color: #cdc1b5;
+	border-radius: 5px;
+	animation-name: boostOut;
+	animation-delay: 0s;
+	animation-duration: 150ms;
+}
+.game-code {
+	transition: all 300ms;
+	position: absolute;
+	font-size: 60px;
+	font-weight: bold;
+	transform: translate(-50%, -53%);
+	color: #776e65;
+	animation-name: boostOut;
+	animation-delay: 0s;
+	animation-duration: 150ms;
+}
+.game-tile-2 {
+	background-color: #eee4db;
+}
+.game-code-2 {
+	color: #776e65;
+}
+.game-tile-4 {
+	background-color: #ede0c9;
+}
+.game-code-4 {
+	color: #776e65;
+}
+.game-tile-8 {
+	background-color: #f1b17f;
+}
+.game-code-8 {
+	color: #ffffff;
+}
+.game-tile-16 {
+	background-color: #f29664;
+}
+.game-code-16 {
+	color: #ffffff;
+}
+.game-tile-32 {
+	background-color: #f37c64;
+}
+.game-code-32 {
+	color: #ffffff;
+}
+.game-tile-64 {
+	background-color: #f25d49;
+}
+.game-code-64 {
+	color: #ffffff;
+}
+.game-tile-128 {
+	background-color: #eccd77;
+}
+.game-code-128 {
+	color: #ffffff;
+}
+.game-tile-256 {
+	background-color: #eccb69;
+}
+.game-code-256 {
+	color: #ffffff;
+	font-size: 50px;
+}
+.game-tile-512 {
+	background-color: #ebc75a;
+}
+.game-code-512 {
+	color: #ffffff;
+	font-size: 50px;
+}
+.game-tile-1024 {
+	background-color: #ecc44e;
+}
+.game-code-1024 {
+	color: #ffffff;
+	font-size: 40px;
+}
+.game-tile-2048 {
+	background-color: #ebb54e;
+}
+.game-code-2048 {
+	color: #ffffff;
+	font-size: 40px;
+}

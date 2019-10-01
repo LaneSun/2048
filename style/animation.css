@@ -1,0 +1,4 @@
+@keyframes boostOut {
+  from { border-radius: 100px; transform: translate(-50%, -50%) scale(0); }
+  to   { border-radius: 5px; transform: translate(-50%, -50%) scale(1); }
+}
