@@ -122,7 +122,7 @@
     let moveRight = () => {
         buildTemp();
         for (let i = 0; i < 3; i++) {
-            for (let j = 0; j < temp_ary.length; j++) {
+            for (let j = temp_ary.length - 1; j >= 0; j--) {
                 if (getX(j) < 3 && temp_ary[j].length) {
                     if (getTotal(temp_ary[j + 1]) === 0) {
                         temp_ary[j + 1] = temp_ary[j];
@@ -160,7 +160,7 @@
     let moveBottom = () => {
         buildTemp();
         for (let i = 0; i < 3; i++) {
-            for (let j = 0; j < temp_ary.length; j++) {
+            for (let j = temp_ary.length - 1; j >= 0; j--) {
                 if (getY(j) < 3 && temp_ary[j].length) {
                     if (getTotal(temp_ary[j + 4]) === 0) {
                         temp_ary[j + 4] = temp_ary[j];
@@ -251,6 +251,31 @@
                 moveBottom();
                 break;
             default:
+        }
+    });
+
+    let startx = null;
+    let starty = null;
+    window.addEventListener("touchstart", (e) => {
+        startx = e.touches[0].clientX;
+        starty = e.touches[0].clientY;
+    });
+    window.addEventListener("touchend", (e) => {
+        let mx = e.changedTouches[0].clientX - startx;
+        let my = e.changedTouches[0].clientY - starty;
+        if (Math.abs(mx) + Math.abs(my) < 10) return;
+        if (Math.abs(mx) > Math.abs(my)) {
+            if (mx > 0) {
+                moveRight();
+            } else {
+                moveLeft();
+            }
+        } else {
+            if (my > 0) {
+                moveBottom();
+            } else {
+                moveTop();
+            }
         }
     });
 
