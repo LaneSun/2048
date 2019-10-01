@@ -10,7 +10,13 @@
     random = await require('lib/random'),
     object = await require('lib/object');
 
-    let getTrans = i => 79 + 134 * i;
+    let scale = 100;
+
+    let scaleX = innerWidth / 700 * 100;
+    let scaleY = innerHeight / 944 * 100;
+    scale = Math.min(scaleX, scaleY);
+    document.body.style.fontSize = scale + "px";
+    let getTrans = i => (79 + 134 * i) * scale / 100;
     let getX = i => i % 4;
     let getY = i => 0|(i / 4);
 
@@ -26,7 +32,7 @@
     let setInner = (elem, inner) => {
         let i = inner.toString().length;
         i = i < 4 ? 4 : i;
-        elem.style.fontSize = 40 * 4 / i + "px";
+        elem.style.fontSize = 0.4 * 4 / i + "em";
         elem.innerText = inner;
     };
 

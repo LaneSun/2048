@@ -1,11 +1,11 @@
 .game-tile {
 	transition: all 300ms;
 	position: absolute;
-	width: 118px;
-	height: 118px;
+	width: 1.18em;
+	height: 1.18em;
 	transform: translate(-50%, -50%);
 	background-color: #cdc1b5;
-	border-radius: 5px;
+	border-radius: 0.05em;
 	animation-name: boostOut;
 	animation-delay: 0s;
 	animation-duration: 150ms;
@@ -13,7 +13,7 @@
 .game-code {
 	transition: all 300ms;
 	position: absolute;
-	font-size: 60px;
+	font-size: 0.6em;
 	font-weight: bold;
 	transform: translate(-50%, -53%);
 	color: #776e65;
